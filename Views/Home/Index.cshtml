@@ -1,0 +1,35 @@
+﻿  @model HomeVM
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>The select element</h1>
+
+    <p>The select element is used to create a drop-down list.</p>
+
+
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="models">
+        <option selected>Select</option>
+        @foreach (var item in Model.carModels)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+
+
+    </select>
+
+
+    <select name="cars" id="brands">
+        <option selected>Select</option>
+    </select>
+    <br><br>
+   
+   
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="~/JS/script.js"></script>
+
+</html>
